@@ -21,6 +21,7 @@ function playGame(){
     let gridSize = getSize();
     createGrid(gridSize);
     draw();
+    restartGame();
 }
 
 function draw(){
@@ -33,6 +34,18 @@ function draw(){
     })
 
   
+}
+
+function restartGame() {
+    let restartButton = document.querySelector("#restart");
+    let container = document.getElementById("container");
+
+    restartButton.addEventListener("click", ()=> {
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        };
+        playGame();
+    })
 }
 
 playGame();

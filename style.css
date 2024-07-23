@@ -15,3 +15,8 @@
 .pixel:hover {
     background-color: black;
 }
+
+#restart {
+    display: flex;
+    margin: auto;
+}
