@@ -8,13 +8,12 @@ function getSize() {
 };
 
 function createGrid(gridSize){
-    let gridArray = [];
     for (i = 0; i<gridSize; i++) {
-        gridArray.push(document.createElement("div"));
-    };
-    gridArray.classList.add("pixel");
-    let containerDiv = document.getElementsByClassName(".container");
-    containerDiv.appendChild(gridArray);
+        let pixel = document.createElement("div");
+        pixel.className = "pixel";
+
+        document.getElementById("container").appendChild(pixel);
+    };    
 };
 
 function playGame(){
