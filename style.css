@@ -2,3 +2,7 @@
     width: 960px;
     height: 960px;
 }
+
+.pixel:hover {
+    background-color: black;
+}
