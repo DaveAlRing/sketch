@@ -7,10 +7,9 @@
 }
 
 .pixel {
-    width: 50px;
+    width: 10px;
     height: auto;
-    /* flex-grow: 1; */
-    background-color: blue;
+    flex-grow: 1;
 }
 
 .pixel:hover {

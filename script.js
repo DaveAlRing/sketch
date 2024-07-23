@@ -8,6 +8,7 @@ function getSize() {
 };
 
 function createGrid(gridSize){
+    gridSize = gridSize * gridSize;
     for (i = 0; i<gridSize; i++) {
         let pixel = document.createElement("div");
         pixel.className = "pixel";
@@ -19,6 +20,19 @@ function createGrid(gridSize){
 function playGame(){
     let gridSize = getSize();
     createGrid(gridSize);
+    draw();
+}
+
+function draw(){
+    let gamePixel = document.querySelectorAll(".pixel");
+
+    gamePixel.forEach(function(pixel) {
+        pixel.addEventListener("mouseover", ()=>{
+            pixel.style.backgroundColor = "teal";
+        })
+    })
+
+  
 }
 
 playGame();
